@@ -27,7 +27,7 @@ Screenshot-
 As you can see that we got the expected output from the above screenshot.
 
 
-## THe security Bypass -
+## The security Bypass -
 
 As you can see we can get the file by putting the file path instead of file name or its link, so file path is the security bypass we are using.
 
