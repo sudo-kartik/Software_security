@@ -128,5 +128,26 @@ You can see that after our attack the value of Arsenic is -375 which is not acco
 
 So the new value of Lithium is 1050 and Arsenic is -375, Which is what we need. 
 
-## Possible solution to disable the security bypasses are - 
 
+## Possible solution to disable the security bypasses are
+
+Verification of input range before letting it pass to the business logic. For e.g.
+
+```
+...
+static final int MIN = [some_integer_value];
+static final int MAX = [some_integer_value];
+
+somefunction(int inputVal) {
+
+  if(inputVal<MIN || MAX<inputVal)
+     throw new IllegalArgumentException("The given input value does not qualify for the predefined input range");
+
+  // Business Logic - Start
+  ...
+  // Use of input value
+  ...
+  // Business Logic - End
+ 
+}
+```
